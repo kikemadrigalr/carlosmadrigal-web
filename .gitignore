@@ -1,0 +1,20 @@
+# Angular / Node
+/dist
+/out-tsc
+/node_modules
+/.angular/cache
+npm-debug.log*
+yarn-error.log*
+
+# Vercel
+/.vercel
+
+# IDE
+/.vscode/*
+!/.vscode/extensions.json
+/.idea
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://carlosmadrigal.vercel.app/sitemap.xml

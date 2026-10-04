@@ -1,0 +1,6 @@
+Coloca aquí el PDF del CV con el nombre exacto:
+
+  Carlos_Madrigal_CV.pdf
+
+Se sirve en /cv/Carlos_Madrigal_CV.pdf y lo enlazan los botones "Descargar CV".
+Puedes borrar este archivo LEEME.txt una vez copiado el PDF.

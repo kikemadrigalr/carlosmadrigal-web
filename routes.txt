@@ -1,0 +1,14 @@
+/es
+/es/proyectos/dxone
+/es/proyectos/connect
+/es/proyectos/rdstp
+/es/proyectos/rdgenpp
+/es/proyectos/galexito
+/es/sobre-mi
+/en
+/en/projects/dxone
+/en/projects/connect
+/en/projects/rdstp
+/en/projects/rdgenpp
+/en/projects/galexito
+/en/about
