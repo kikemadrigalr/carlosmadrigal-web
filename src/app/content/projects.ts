@@ -93,7 +93,7 @@ export const PROJECTS: Project[] = [
         ],
         architecture: [
           'Módulos definidos por configuración en SQL (esquemas + funcionales) en lugar de código específico por módulo: menos duplicación, despliegue de un módulo nuevo en una ejecución.',
-          'API-first: el contrato OpenAPI se define antes del código; frontend y backend avanzan en paralelo.',
+          'Desarrollo guiado por especificaciones (PRD), con el documento OpenAPI generado desde el código como contrato de integración; frontend y backend avanzan en paralelo.',
           'Multi-programa y multi-división sobre una sola instancia, con aislamiento lógico de datos.',
           'Pruebas unitarias con xUnit sobre servicios; E2E con Playwright.',
         ],
@@ -112,7 +112,7 @@ export const PROJECTS: Project[] = [
         ],
         architecture: [
           'Modules defined by SQL configuration (schemas + functionals) instead of module-specific code: less duplication, a new module deployed in one run.',
-          'API-first: the OpenAPI contract is defined before the code; frontend and backend move in parallel.',
+          'Spec-guided development (PRD), with the OpenAPI document generated from the code as the integration contract; frontend and backend move in parallel.',
           'Multi-program and multi-division on a single instance, with logical data isolation.',
           'Unit tests with xUnit on services; E2E with Playwright.',
         ],

@@ -11,16 +11,17 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  flex: 1;
-  min-height: calc(100svh - 64px);
-  padding-block: clamp(2rem, 5vh, 4rem) clamp(1.5rem, 4vh, 3rem);
+  padding-block: 0 clamp(1.5rem, 4vh, 3rem);
 }
 
+/* El contenido ocupa el primer viewport completo, centrado;
+   las métricas quedan bajo el pliegue y aparecen al hacer scroll. */
 .hero-core {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex: 1;
+  min-height: calc(100svh - 64px);
+  padding-block: clamp(2rem, 5vh, 4rem) clamp(1.5rem, 4vh, 3rem);
 }
 
 .hero-label {
@@ -55,13 +56,11 @@
   margin-top: 2rem;
 }
 
-/* Métricas: al pie del hero, visibles sin hacer scroll.
-   El margen mínimo evita que la línea quede pegada a los CTA. */
+/* Métricas: justo bajo el pliegue, primera recompensa del scroll */
 .metrics {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
-  margin-top: clamp(3.5rem, 9vh, 6rem);
   padding-top: 2rem;
   border-top: 1px solid var(--line);
 }

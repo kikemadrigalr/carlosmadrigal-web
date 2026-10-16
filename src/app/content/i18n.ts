@@ -46,9 +46,9 @@ const es: UiStrings = {
   },
   hero: {
     labelItems: ['Backend .NET', 'APIs REST', 'Angular'],
-    title: 'APIs .NET que sostienen operaciones clínicas en cuatro países.',
+    title: 'Backend .NET que entra a producción y se queda.',
     paragraph:
-      'Cinco años construyendo servicios para salud y farma, donde un dato mal guardado tiene consecuencias reales. API-first con OpenAPI como contrato, xUnit y Playwright como red de seguridad, Angular cuando hace falta frontend — e IA integrada en el flujo de trabajo diario.',
+      'Cinco años diseñando y manteniendo APIs REST con .NET, en sistemas donde un dato mal guardado tiene consecuencias reales. OpenAPI/Swagger como contrato de integración, xUnit y Playwright como red de seguridad, Angular cuando hace falta frontend — e IA integrada en el flujo de trabajo diario.',
     ctaProjects: 'Ver proyectos',
     ctaCv: 'Descargar CV (PDF)',
     ctaGithub: 'GitHub ↗',
@@ -56,7 +56,7 @@ const es: UiStrings = {
   },
   metrics: [
     { value: '5', label: 'años de experiencia en .NET' },
-    { value: '2018', label: 'primera línea en producción' },
+    { value: '4.5 → 10', label: 'de .NET Framework a .NET 10' },
     { value: '5', label: 'sistemas en producción' },
     { value: '100%', label: 'remoto desde 2023' },
   ],
@@ -66,7 +66,7 @@ const es: UiStrings = {
     groups: [
       {
         name: 'Backend',
-        items: ['C#', '.NET 6/7/8', 'ASP.NET Core', 'Entity Framework', 'OpenAPI / Swagger', '.NET Framework 4.5', 'Web Forms (ASPX)', 'ASP.NET MVC'],
+        items: ['C#', '.NET 6–10', 'ASP.NET Core', 'Entity Framework', 'OpenAPI / Swagger', '.NET Framework 4.5', 'Web Forms (ASPX)', 'ASP.NET MVC'],
       },
       {
         name: 'Datos & Testing',
@@ -121,7 +121,7 @@ const es: UiStrings = {
     eyebrow: '05 — Cómo trabajo',
     title: 'Cuatro reglas que no negocio.',
     items: [
-      { title: 'API-first.', text: 'El contrato OpenAPI se escribe antes que el código; frontend y backend avanzan en paralelo sin bloquearse.' },
+      { title: 'El contrato manda.', text: 'Desarrollo guiado por especificaciones (PRD) y OpenAPI/Swagger como fuente de verdad para la integración; frontend y backend avanzan sin bloquearse.' },
       { title: 'Tests que acompañan.', text: 'xUnit en servicios y lógica de negocio; Playwright para E2E en vivo mientras desarrollo.' },
       { title: 'Refactors seguros.', text: 'Code reviews y SOLID como práctica, no como ideal.' },
       { title: 'La base de datos importa.', text: 'Modelado relacional y procedimientos almacenados en SQL Server; el rendimiento empieza en el dato.' },
@@ -156,9 +156,9 @@ const es: UiStrings = {
   theme: { toLight: 'Cambiar a tema claro', toDark: 'Cambiar a tema oscuro' },
   seo: {
     homeTitle: 'Carlos Madrigal — Desarrollador Backend .NET · APIs REST · Angular',
-    homeDesc: 'Cinco años construyendo APIs .NET para salud y farma. API-first, xUnit, Playwright e IA en el flujo de desarrollo. Remoto desde Colombia.',
+    homeDesc: 'Desarrollador backend .NET: cinco años construyendo APIs REST en producción. OpenAPI/Swagger, xUnit, Playwright e IA en el flujo de desarrollo. Remoto desde Colombia.',
     aboutTitle: 'Sobre mí — Carlos Madrigal',
-    aboutDesc: 'Licenciado en Informática, cinco años en .NET, de Web Forms a .NET 8 en plataformas clínicas que operan en cuatro países.',
+    aboutDesc: 'Licenciado en Informática, cinco años en .NET: de Web Forms a .NET 8 en sistemas que siguen en producción.',
   },
 };
 
@@ -174,9 +174,9 @@ const en: UiStrings = {
   },
   hero: {
     labelItems: ['.NET Backend', 'REST APIs', 'Angular'],
-    title: '.NET APIs powering clinical operations across four countries.',
+    title: '.NET backends that ship to production — and stay there.',
     paragraph:
-      'Five years building services for healthcare and pharma, where a badly stored record has real consequences. API-first with OpenAPI as the contract, xUnit and Playwright as the safety net, Angular when a frontend is needed — and AI woven into my daily workflow.',
+      'Five years designing and maintaining REST APIs with .NET, in systems where a badly stored record has real consequences. OpenAPI/Swagger as the integration contract, xUnit and Playwright as the safety net, Angular when a frontend is needed — and AI woven into my daily workflow.',
     ctaProjects: 'View projects',
     ctaCv: 'Download CV (PDF)',
     ctaGithub: 'GitHub ↗',
@@ -184,7 +184,7 @@ const en: UiStrings = {
   },
   metrics: [
     { value: '5', label: 'years of .NET experience' },
-    { value: '2018', label: 'first line shipped to production' },
+    { value: '4.5 → 10', label: 'from .NET Framework to .NET 10' },
     { value: '5', label: 'systems in production' },
     { value: '100%', label: 'remote since 2023' },
   ],
@@ -194,7 +194,7 @@ const en: UiStrings = {
     groups: [
       {
         name: 'Backend',
-        items: ['C#', '.NET 6/7/8', 'ASP.NET Core', 'Entity Framework', 'OpenAPI / Swagger', '.NET Framework 4.5', 'Web Forms (ASPX)', 'ASP.NET MVC'],
+        items: ['C#', '.NET 6–10', 'ASP.NET Core', 'Entity Framework', 'OpenAPI / Swagger', '.NET Framework 4.5', 'Web Forms (ASPX)', 'ASP.NET MVC'],
       },
       {
         name: 'Data & Testing',
@@ -249,7 +249,7 @@ const en: UiStrings = {
     eyebrow: '05 — How I work',
     title: 'Four non-negotiables.',
     items: [
-      { title: 'API-first.', text: 'The OpenAPI contract comes before the code; frontend and backend move in parallel without blocking each other.' },
+      { title: 'The contract rules.', text: 'Spec-guided development (PRD) with OpenAPI/Swagger as the source of truth for integration; frontend and backend move without blocking each other.' },
       { title: 'Tests that travel with the code.', text: 'xUnit on services and business logic; Playwright for live E2E while I build.' },
       { title: 'Safe refactors.', text: 'Code reviews and SOLID as practice, not aspiration.' },
       { title: 'The database matters.', text: 'Relational modeling and stored procedures in SQL Server; performance starts at the data layer.' },
@@ -284,9 +284,9 @@ const en: UiStrings = {
   theme: { toLight: 'Switch to light theme', toDark: 'Switch to dark theme' },
   seo: {
     homeTitle: 'Carlos Madrigal — .NET Backend Developer · REST APIs · Angular',
-    homeDesc: 'Five years building .NET APIs for healthcare and pharma. API-first, xUnit, Playwright and AI in the development workflow. Remote from Colombia.',
+    homeDesc: '.NET backend developer: five years building REST APIs in production. OpenAPI/Swagger, xUnit, Playwright and AI in the development workflow. Remote from Colombia.',
     aboutTitle: 'About — Carlos Madrigal',
-    aboutDesc: 'Computer Science graduate, five years in .NET, from Web Forms to .NET 8 on clinical platforms operating in four countries.',
+    aboutDesc: 'Computer Science graduate, five years in .NET — from Web Forms to .NET 8 on systems still running in production.',
   },
 };
 
@@ -295,13 +295,13 @@ export const UI: Record<Lang, UiStrings> = { es, en };
 /** Texto de la página "Sobre mí", en párrafos. */
 export const ABOUT: Record<Lang, string[]> = {
   es: [
-    'Soy Licenciado en Informática por la Universidad de Oriente (Venezuela) y llevo cinco años programando en .NET, desde Web Forms en sistemas de gestión interna hasta .NET 8 en plataformas clínicas que hoy operan en cuatro países.',
+    'Soy Licenciado en Informática por la Universidad de Oriente (Venezuela) y llevo cinco años programando en .NET, desde Web Forms en sistemas de gestión interna hasta .NET 8 en plataformas que hoy están en producción — entre ellas, sistemas del sector salud que operan en varios países.',
     'Me interesa el backend que no se ve: el contrato de una API bien definido, el procedimiento almacenado que no se cae con el volumen, el test que atrapa el bug antes que el usuario.',
     'Uso IA a diario — Claude Code, Cursor, MCP — como herramienta de productividad, no como sustituto del criterio. Y fuera del teclado soy trompetista profesional, lo que explica mi obsesión con la práctica deliberada y con que las cosas suenen bien en conjunto.',
     'Inglés B1: leo documentación técnica sin problema; la conversación está en progreso.',
   ],
   en: [
-    'I hold a degree in Computer Science from Universidad de Oriente (Venezuela) and have spent five years programming in .NET — from Web Forms in internal management systems to .NET 8 on clinical platforms that now operate in four countries.',
+    'I hold a degree in Computer Science from Universidad de Oriente (Venezuela) and have spent five years programming in .NET — from Web Forms in internal management systems to .NET 8 on platforms running in production today, including healthcare systems operating across several countries.',
     'I care about the backend nobody sees: the well-defined API contract, the stored procedure that holds under load, the test that catches the bug before the user does.',
     'I use AI daily — Claude Code, Cursor, MCP — as a productivity tool, not a substitute for judgment. Away from the keyboard I’m a professional trumpet player, which explains my obsession with deliberate practice and with things sounding good together.',
     'English: B1. Technical documentation is no problem; conversation is a work in progress.',
