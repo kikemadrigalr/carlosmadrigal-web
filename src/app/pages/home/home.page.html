@@ -1,35 +1,38 @@
-<!-- Hero -->
-<section class="hero container">
-  <p class="status">{{ t().hero.available }}</p>
-  <p class="hero-label mono"><cm-typewriter [items]="t().hero.labelItems" /></p>
-  <h1 class="hero-title">{{ t().hero.title }}</h1>
-  <p class="hero-text muted">{{ t().hero.paragraph }}</p>
-  <div class="hero-actions">
-    <a class="btn btn-primary" [routerLink]="paths().home" fragment="proyectos">{{ t().hero.ctaProjects }} →</a>
-    <a class="btn" [href]="contact.cvPdf" download>{{ t().hero.ctaCv }}</a>
+<!-- Hero: red de nodos interactiva a ancho completo, contenido centrado,
+     métricas al pie del primer viewport -->
+<section class="hero">
+  <cm-hero-network />
+  <div class="container hero-inner">
+    <div class="hero-core">
+      <p class="status rise">{{ t().hero.available }}</p>
+      <p class="hero-label mono rise"><cm-typewriter [items]="t().hero.labelItems" /></p>
+      <h1 class="hero-title rise">{{ t().hero.title }}</h1>
+      <p class="hero-text muted rise">{{ t().hero.paragraph }}</p>
+      <div class="hero-actions rise">
+        <a class="btn btn-primary" [href]="contact.cvPdf" download>{{ t().hero.ctaCv }}</a>
+        <a class="btn" [routerLink]="paths().home" fragment="proyectos">{{ t().hero.ctaProjects }} →</a>
+        <a class="btn btn-ghost" [href]="contact.github" target="_blank" rel="noopener">{{ t().hero.ctaGithub }}</a>
+      </div>
+    </div>
+    <ul class="metrics rise">
+      @for (m of t().metrics; track m.label) {
+        <li>
+          <span class="metric-value mono">{{ m.value }}</span>
+          <span class="metric-label muted">{{ m.label }}</span>
+        </li>
+      }
+    </ul>
   </div>
 </section>
 
-<!-- Métricas: fuera del hero, aparecen al hacer scroll -->
-<section class="metrics-band">
-  <ul class="metrics container">
-    @for (m of t().metrics; track m.label) {
-      <li>
-        <span class="metric-value mono">{{ m.value }}</span>
-        <span class="metric-label muted">{{ m.label }}</span>
-      </li>
-    }
-  </ul>
-</section>
-
 <!-- Stack -->
-<section class="section">
+<section class="section section-alt">
   <div class="container">
     <p class="eyebrow">{{ t().stack.eyebrow }}</p>
     <h2 class="section-title">{{ t().stack.title }}</h2>
     <div class="stack-grid">
       @for (g of t().stack.groups; track g.name) {
-        <div>
+        <div class="stack-group">
           <h3 class="stack-name">{{ g.name }}</h3>
           <ul class="chips">
             @for (item of g.items; track item) {
@@ -39,9 +42,9 @@
         </div>
       }
     </div>
-    <p class="built muted">
+    <p class="built-with muted">
       {{ t().stack.builtWith }}
-      <a [href]="contact.repo" target="_blank" rel="noopener">{{ t().stack.builtWithLink }}</a>
+      <a class="built-with-link" [href]="contact.repo" target="_blank" rel="noopener">{{ t().stack.builtWithLink }}</a>
     </p>
   </div>
 </section>
@@ -72,6 +75,43 @@
   </div>
 </section>
 
+<!-- Experiencia -->
+<section class="section section-alt">
+  <div class="container">
+    <p class="eyebrow">{{ t().experience.eyebrow }}</p>
+    <h2 class="section-title">{{ t().experience.title }}</h2>
+    <ol class="xp-list">
+      @for (item of t().experience.items; track item.period) {
+        <li class="xp-item">
+          <span class="xp-period mono">{{ item.period }}</span>
+          <div>
+            <h3 class="xp-title">{{ item.title }}</h3>
+            <p class="muted xp-text">{{ item.text }}</p>
+          </div>
+        </li>
+      }
+    </ol>
+  </div>
+</section>
+
+<!-- IA en el flujo de trabajo -->
+<section class="section section-tint">
+  <div class="container">
+    <p class="eyebrow">{{ t().ai.eyebrow }}</p>
+    <h2 class="section-title">{{ t().ai.title }}</h2>
+    <ul class="ai-grid">
+      @for (item of t().ai.items; track item.title; let i = $index) {
+        <li>
+          <span class="how-index mono">0{{ i + 1 }}</span>
+          <h3 class="how-title">{{ item.title }}</h3>
+          <p class="muted">{{ item.text }}</p>
+        </li>
+      }
+    </ul>
+    <p class="ai-closing">{{ t().ai.closing }}</p>
+  </div>
+</section>
+
 <!-- Cómo trabajo -->
 <section class="section">
   <div class="container">
@@ -90,7 +130,7 @@
 </section>
 
 <!-- Contacto -->
-<section class="section" id="contacto">
+<section class="section section-alt" id="contacto">
   <div class="container contact">
     <p class="eyebrow">{{ t().contact.eyebrow }}</p>
     <h2 class="contact-title">{{ t().contact.title }}</h2>
@@ -100,8 +140,9 @@
         {{ copied() ? t().contact.copied : t().contact.copyEmail }}
       </button>
       <a class="btn" [href]="contact.linkedin" target="_blank" rel="noopener">{{ t().contact.linkedin }}</a>
+      <a class="btn" [href]="contact.github" target="_blank" rel="noopener">{{ t().contact.github }}</a>
       <a class="btn" [href]="contact.whatsapp" target="_blank" rel="noopener">{{ t().contact.whatsapp }}</a>
     </div>
-    <p class="mono contact-email">{{ contact.email }}</p>
+    <p class="mono contact-email"><a [href]="'mailto:' + contact.email">{{ contact.email }}</a></p>
   </div>
 </section>

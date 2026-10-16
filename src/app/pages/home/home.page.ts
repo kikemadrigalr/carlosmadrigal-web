@@ -5,11 +5,12 @@ import { SeoService } from '../../core/seo.service';
 import { CONTACT, UI } from '../../content/i18n';
 import { PROJECTS } from '../../content/projects';
 import { TypewriterComponent } from '../../components/typewriter/typewriter.component';
+import { HeroNetworkComponent } from '../../components/hero-network/hero-network.component';
 
 @Component({
   selector: 'cm-home',
   standalone: true,
-  imports: [RouterLink, TypewriterComponent],
+  imports: [RouterLink, TypewriterComponent, HeroNetworkComponent],
   templateUrl: './home.page.html',
   styleUrl: './home.page.css',
 })

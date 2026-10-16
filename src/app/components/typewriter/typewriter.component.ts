@@ -21,7 +21,8 @@ import { isPlatformBrowser } from '@angular/common';
   selector: 'cm-typewriter',
   standalone: true,
   template: `
-    <span class="tw" [attr.aria-label]="fullText()">
+    <span class="tw">
+      <span class="sr-only">{{ fullText() }}</span>
       <span aria-hidden="true">{{ typed() ?? fullText() }}</span><span class="cursor" aria-hidden="true" [class.done]="done()">▍</span>
     </span>
   `,
@@ -69,7 +70,7 @@ export class TypewriterComponent {
   }
 
   private run(): void {
-    if (!this.isBrowser || this.reduced) {
+    if (!this.isBrowser || this.reduced || this.items().length === 0) {
       this.typed.set(null);
       this.done.set(true);
       return;

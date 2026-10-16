@@ -31,6 +31,9 @@ export class SeoService {
     this.meta.updateTag({ property: 'og:type', content: 'website' });
     this.meta.updateTag({ property: 'og:site_name', content: 'Carlos Madrigal' });
     this.meta.updateTag({ property: 'og:image', content: SITE_URL + '/og.png' });
+    this.meta.updateTag({ property: 'og:image:width', content: '1200' });
+    this.meta.updateTag({ property: 'og:image:height', content: '630' });
+    this.meta.updateTag({ property: 'og:image:alt', content: 'Carlos Madrigal — Backend .NET · APIs REST · Angular' });
     this.meta.updateTag({ property: 'og:locale', content: input.lang === 'es' ? 'es_CO' : 'en_US' });
     this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
 

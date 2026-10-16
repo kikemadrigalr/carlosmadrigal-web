@@ -2,8 +2,8 @@ import { Lang } from '../core/lang.service';
 
 /** Textos de interfaz y de la home, por idioma. */
 export interface UiStrings {
-  nav: { projects: string; about: string; contact: string; skip: string };
-  hero: { label: string; labelItems: string[]; title: string; paragraph: string; ctaProjects: string; ctaCv: string; available: string };
+  nav: { projects: string; about: string; contact: string; skip: string; home: string; main: string; menu: string };
+  hero: { labelItems: string[]; title: string; paragraph: string; ctaProjects: string; ctaCv: string; ctaGithub: string; available: string };
   metrics: { value: string; label: string }[];
   stack: {
     eyebrow: string;
@@ -12,12 +12,14 @@ export interface UiStrings {
     builtWith: string;
     builtWithLink: string;
   };
-  projects: { eyebrow: string; title: string; viewCase: string; all: string };
+  projects: { eyebrow: string; title: string; viewCase: string };
+  experience: { eyebrow: string; title: string; items: { period: string; title: string; text: string }[] };
+  ai: { eyebrow: string; title: string; items: { title: string; text: string }[]; closing: string };
   how: { eyebrow: string; title: string; items: { title: string; text: string }[] };
-  contact: { eyebrow: string; title: string; text: string; copyEmail: string; copied: string; linkedin: string; whatsapp: string };
+  contact: { eyebrow: string; title: string; text: string; copyEmail: string; copied: string; linkedin: string; github: string; whatsapp: string };
   project: { context: string; role: string; architecture: string; outcome: string; stack: string; next: string; back: string };
   about: { eyebrow: string; title: string };
-  footer: { role: string; builtWith: string; code: string; rights: string };
+  footer: { role: string; builtWith: string; code: string };
   notFound: { title: string; text: string; home: string };
   theme: { toLight: string; toDark: string };
   seo: { homeTitle: string; homeDesc: string; aboutTitle: string; aboutDesc: string };
@@ -33,25 +35,34 @@ export const CONTACT = {
 };
 
 const es: UiStrings = {
-  nav: { projects: 'Proyectos', about: 'Sobre mí', contact: 'Contactar', skip: 'Saltar al contenido' },
+  nav: {
+    projects: 'Proyectos',
+    about: 'Sobre mí',
+    contact: 'Contactar',
+    skip: 'Saltar al contenido',
+    home: 'Carlos Madrigal — inicio',
+    main: 'Principal',
+    menu: 'Menú',
+  },
   hero: {
-    label: 'Desarrollador Backend .NET · APIs REST · Full Stack Angular · Remoto desde Colombia',
-    labelItems: ['Desarrollador Backend .NET', 'APIs REST', 'Full Stack Angular', 'Remoto desde Colombia'],
-    title: 'Construyo APIs que sostienen operaciones clínicas en producción.',
+    labelItems: ['Backend .NET', 'APIs REST', 'Angular'],
+    title: 'APIs .NET que sostienen operaciones clínicas en cuatro países.',
     paragraph:
-      'Cinco años diseñando y manteniendo servicios .NET para el sector salud y farmacéutico, donde un dato mal guardado tiene consecuencias reales. Trabajo API-first con OpenAPI como contrato, pruebas en xUnit y Playwright, y Angular cuando el producto necesita frontend.',
+      'Cinco años construyendo servicios para salud y farma, donde un dato mal guardado tiene consecuencias reales. API-first con OpenAPI como contrato, xUnit y Playwright como red de seguridad, Angular cuando hace falta frontend — e IA integrada en el flujo de trabajo diario.',
     ctaProjects: 'Ver proyectos',
     ctaCv: 'Descargar CV (PDF)',
+    ctaGithub: 'GitHub ↗',
     available: 'Disponible para roles remotos',
   },
   metrics: [
-    { value: '5+', label: 'años con .NET' },
-    { value: '6', label: 'proyectos en producción' },
+    { value: '5', label: 'años de experiencia en .NET' },
+    { value: '2018', label: 'primera línea en producción' },
+    { value: '5', label: 'sistemas en producción' },
     { value: '100%', label: 'remoto desde 2023' },
   ],
   stack: {
     eyebrow: '01 — Stack',
-    title: 'Herramientas con las que entrego.',
+    title: 'Herramientas con las que trabajo a diario.',
     groups: [
       {
         name: 'Backend',
@@ -63,30 +74,67 @@ const es: UiStrings = {
       },
       {
         name: 'Frontend & Herramientas',
-        items: ['Angular 14/16/18', 'TypeScript', 'JavaScript ES6+', 'Bootstrap', 'Git', 'Visual Studio', 'Postman', 'Claude Code', 'Cursor', 'MCP'],
+        items: ['Angular 14/16/18', 'TypeScript', 'JavaScript ES6+', 'Bootstrap', 'Git', 'Visual Studio', 'Postman'],
       },
     ],
     builtWith: 'Esta web está hecha con Angular 18 y desplegada en Vercel.',
     builtWithLink: 'Ver el código en GitHub ↗',
   },
-  projects: { eyebrow: '02 — Proyectos', title: 'Sistemas en producción.', viewCase: 'Ver el caso →', all: 'Todos los proyectos' },
+  projects: { eyebrow: '02 — Proyectos', title: 'Sistemas en producción.', viewCase: 'Ver el caso →' },
+  experience: {
+    eyebrow: '03 — Experiencia',
+    title: 'Dónde he construido.',
+    items: [
+      {
+        period: '2023 — hoy',
+        title: 'TBTB Global · Desarrollador Full Stack',
+        text: 'Plataformas clínicas en .NET 8 y Angular para el sector salud y farmacéutico: DxOne, Connect 2.0, RDSTP. Remoto.',
+      },
+      {
+        period: '2020 — 2023',
+        title: 'Música profesional y proyectos propios',
+        text: 'Trompetista profesional. El regreso al desarrollo en 2023 fue una decisión, no una casualidad.',
+      },
+      {
+        period: '2018 — 2020',
+        title: 'Empresas Andinas · Analista de Sistemas',
+        text: '.NET Framework 4.5 y Web Forms sobre el sistema de gestión Galexito; reportes con SQL Server y Reporting Services; automatización de procesos de RRHH.',
+      },
+      {
+        period: '2016 — 2019',
+        title: 'Universidad de Oriente · Lic. en Informática',
+        text: 'Prácticas profesionales como analista de sistemas (2016); titulado en 2019.',
+      },
+    ],
+  },
+  ai: {
+    eyebrow: '04 — IA',
+    title: 'IA en el flujo de trabajo, no en el discurso.',
+    items: [
+      { title: 'Claude Code y Cursor', text: 'A diario: refactorización, documentación y depuración.' },
+      { title: 'MCP', text: 'Conecto el entorno de desarrollo con las APIs y herramientas internas de la organización.' },
+      { title: 'Playwright MCP', text: 'Pruebas E2E dirigidas por IA mientras desarrollo, no después.' },
+    ],
+    closing: 'Las decisiones de arquitectura siguen siendo mías. La IA multiplica; el criterio dirige.',
+  },
   how: {
-    eyebrow: '03 — Cómo trabajo',
+    eyebrow: '05 — Cómo trabajo',
     title: 'Cuatro reglas que no negocio.',
     items: [
       { title: 'API-first.', text: 'El contrato OpenAPI se escribe antes que el código; frontend y backend avanzan en paralelo sin bloquearse.' },
       { title: 'Tests que acompañan.', text: 'xUnit en servicios y lógica de negocio; Playwright para E2E en vivo mientras desarrollo.' },
       { title: 'Refactors seguros.', text: 'Code reviews y SOLID como práctica, no como ideal.' },
-      { title: 'IA como copiloto.', text: 'Claude Code, Cursor y MCP a diario para refactorizar, documentar y depurar. Las decisiones de arquitectura las tomo yo.' },
+      { title: 'La base de datos importa.', text: 'Modelado relacional y procedimientos almacenados en SQL Server; el rendimiento empieza en el dato.' },
     ],
   },
   contact: {
-    eyebrow: '04 — Contacto',
+    eyebrow: '06 — Contacto',
     title: '¿Tienes un sistema que necesita un backend sólido?',
-    text: 'Respondo yo, en un día laborable. Disponible para roles remotos en LATAM y EE.UU.',
+    text: 'Respondo yo, en menos de un día hábil. Disponible para roles remotos en LATAM y EE.UU.',
     copyEmail: 'Copiar correo',
     copied: 'Copiado ✓',
     linkedin: 'Escríbeme en LinkedIn ↗',
+    github: 'GitHub ↗',
     whatsapp: 'WhatsApp ↗',
   },
   project: {
@@ -103,33 +151,41 @@ const es: UiStrings = {
     role: 'Desarrollador Backend .NET · APIs REST · Angular',
     builtWith: 'Hecho con Angular 18',
     code: 'Código en GitHub ↗',
-    rights: 'Todos los derechos reservados.',
   },
   notFound: { title: 'Página no encontrada', text: 'La ruta que buscas no existe o cambió de lugar.', home: 'Ir al inicio' },
   theme: { toLight: 'Cambiar a tema claro', toDark: 'Cambiar a tema oscuro' },
   seo: {
     homeTitle: 'Carlos Madrigal — Desarrollador Backend .NET · APIs REST · Angular',
-    homeDesc: 'Cinco años construyendo APIs .NET para salud y farma. API-first, xUnit, Playwright, Angular. Remoto desde Colombia.',
+    homeDesc: 'Cinco años construyendo APIs .NET para salud y farma. API-first, xUnit, Playwright e IA en el flujo de desarrollo. Remoto desde Colombia.',
     aboutTitle: 'Sobre mí — Carlos Madrigal',
     aboutDesc: 'Licenciado en Informática, cinco años en .NET, de Web Forms a .NET 8 en plataformas clínicas que operan en cuatro países.',
   },
 };
 
 const en: UiStrings = {
-  nav: { projects: 'Projects', about: 'About', contact: 'Contact', skip: 'Skip to content' },
+  nav: {
+    projects: 'Projects',
+    about: 'About',
+    contact: 'Contact',
+    skip: 'Skip to content',
+    home: 'Carlos Madrigal — home',
+    main: 'Main',
+    menu: 'Menu',
+  },
   hero: {
-    label: '.NET Backend Developer · REST APIs · Angular Full Stack · Remote from Colombia',
-    labelItems: ['.NET Backend Developer', 'REST APIs', 'Angular Full Stack', 'Remote from Colombia'],
-    title: 'I build APIs that keep clinical operations running in production.',
+    labelItems: ['.NET Backend', 'REST APIs', 'Angular'],
+    title: '.NET APIs powering clinical operations across four countries.',
     paragraph:
-      'Five years designing and maintaining .NET services for healthcare and pharma, where a badly stored record has real consequences. I work API-first with OpenAPI as the contract, test with xUnit and Playwright, and ship Angular when the product needs a frontend.',
+      'Five years building services for healthcare and pharma, where a badly stored record has real consequences. API-first with OpenAPI as the contract, xUnit and Playwright as the safety net, Angular when a frontend is needed — and AI woven into my daily workflow.',
     ctaProjects: 'View projects',
     ctaCv: 'Download CV (PDF)',
+    ctaGithub: 'GitHub ↗',
     available: 'Open to remote roles',
   },
   metrics: [
-    { value: '5+', label: 'years with .NET' },
-    { value: '6', label: 'projects in production' },
+    { value: '5', label: 'years of .NET experience' },
+    { value: '2018', label: 'first line shipped to production' },
+    { value: '5', label: 'systems in production' },
     { value: '100%', label: 'remote since 2023' },
   ],
   stack: {
@@ -146,30 +202,67 @@ const en: UiStrings = {
       },
       {
         name: 'Frontend & Tools',
-        items: ['Angular 14/16/18', 'TypeScript', 'JavaScript ES6+', 'Bootstrap', 'Git', 'Visual Studio', 'Postman', 'Claude Code', 'Cursor', 'MCP'],
+        items: ['Angular 14/16/18', 'TypeScript', 'JavaScript ES6+', 'Bootstrap', 'Git', 'Visual Studio', 'Postman'],
       },
     ],
     builtWith: 'This site is built with Angular 18 and deployed on Vercel.',
     builtWithLink: 'View the code on GitHub ↗',
   },
-  projects: { eyebrow: '02 — Projects', title: 'Systems in production.', viewCase: 'View case →', all: 'All projects' },
+  projects: { eyebrow: '02 — Projects', title: 'Systems in production.', viewCase: 'View case →' },
+  experience: {
+    eyebrow: '03 — Experience',
+    title: 'Where I’ve built.',
+    items: [
+      {
+        period: '2023 — today',
+        title: 'TBTB Global · Full Stack Developer',
+        text: 'Clinical platforms in .NET 8 and Angular for healthcare and pharma: DxOne, Connect 2.0, RDSTP. Remote.',
+      },
+      {
+        period: '2020 — 2023',
+        title: 'Professional music and personal projects',
+        text: 'Professional trumpet player. Returning to software in 2023 was a decision, not a coincidence.',
+      },
+      {
+        period: '2018 — 2020',
+        title: 'Empresas Andinas · Systems Analyst',
+        text: '.NET Framework 4.5 and Web Forms on the Galexito management system; SQL Server and Reporting Services reports; HR process automation.',
+      },
+      {
+        period: '2016 — 2019',
+        title: 'Universidad de Oriente · BSc in Computer Science',
+        text: 'Professional internship as a systems analyst (2016); graduated in 2019.',
+      },
+    ],
+  },
+  ai: {
+    eyebrow: '04 — AI',
+    title: 'AI in the workflow, not in the pitch.',
+    items: [
+      { title: 'Claude Code and Cursor', text: 'Daily: refactoring, documentation and debugging.' },
+      { title: 'MCP', text: 'Wiring the dev environment into the organization’s internal APIs and tools.' },
+      { title: 'Playwright MCP', text: 'AI-driven E2E tests while I build, not after.' },
+    ],
+    closing: 'Architecture decisions are still mine. AI multiplies; judgment steers.',
+  },
   how: {
-    eyebrow: '03 — How I work',
-    title: 'Four rules I don’t negotiate.',
+    eyebrow: '05 — How I work',
+    title: 'Four non-negotiables.',
     items: [
       { title: 'API-first.', text: 'The OpenAPI contract comes before the code; frontend and backend move in parallel without blocking each other.' },
       { title: 'Tests that travel with the code.', text: 'xUnit on services and business logic; Playwright for live E2E while I build.' },
       { title: 'Safe refactors.', text: 'Code reviews and SOLID as practice, not aspiration.' },
-      { title: 'AI as copilot.', text: 'Claude Code, Cursor and MCP every day to refactor, document and debug. Architecture decisions are mine.' },
+      { title: 'The database matters.', text: 'Relational modeling and stored procedures in SQL Server; performance starts at the data layer.' },
     ],
   },
   contact: {
-    eyebrow: '04 — Contact',
+    eyebrow: '06 — Contact',
     title: 'Have a system that needs a solid backend?',
-    text: 'I answer personally, within one business day. Open to remote roles across LATAM and the US.',
+    text: 'I reply personally within one business day. Open to remote roles across LATAM and the US.',
     copyEmail: 'Copy email',
     copied: 'Copied ✓',
     linkedin: 'Message me on LinkedIn ↗',
+    github: 'GitHub ↗',
     whatsapp: 'WhatsApp ↗',
   },
   project: {
@@ -186,13 +279,12 @@ const en: UiStrings = {
     role: '.NET Backend Developer · REST APIs · Angular',
     builtWith: 'Built with Angular 18',
     code: 'Code on GitHub ↗',
-    rights: 'All rights reserved.',
   },
   notFound: { title: 'Page not found', text: 'The route you’re looking for doesn’t exist or has moved.', home: 'Go home' },
   theme: { toLight: 'Switch to light theme', toDark: 'Switch to dark theme' },
   seo: {
     homeTitle: 'Carlos Madrigal — .NET Backend Developer · REST APIs · Angular',
-    homeDesc: 'Five years building .NET APIs for healthcare and pharma. API-first, xUnit, Playwright, Angular. Remote from Colombia.',
+    homeDesc: 'Five years building .NET APIs for healthcare and pharma. API-first, xUnit, Playwright and AI in the development workflow. Remote from Colombia.',
     aboutTitle: 'About — Carlos Madrigal',
     aboutDesc: 'Computer Science graduate, five years in .NET, from Web Forms to .NET 8 on clinical platforms operating in four countries.',
   },

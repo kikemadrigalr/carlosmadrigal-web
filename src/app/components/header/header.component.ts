@@ -11,12 +11,12 @@ import { UI } from '../../content/i18n';
   template: `
     <header class="header">
       <div class="container header-inner">
-        <a class="brand" [routerLink]="paths().home" aria-label="Carlos Madrigal — inicio">
+        <a class="brand" [routerLink]="paths().home" [attr.aria-label]="t().nav.home">
           <span class="brand-mark mono">CM</span>
           <span class="brand-name">Carlos Madrigal</span>
         </a>
 
-        <nav class="nav" [class.open]="open()" aria-label="Principal">
+        <nav class="nav" id="nav" [class.open]="open()" [attr.aria-label]="t().nav.main">
           <a [routerLink]="paths().home" fragment="proyectos" (click)="open.set(false)">{{ t().nav.projects }}</a>
           <a [routerLink]="paths().about" routerLinkActive="active" (click)="open.set(false)">{{ t().nav.about }}</a>
           <a class="lang" [routerLink]="switchUrl()" (click)="open.set(false)" [attr.aria-label]="lang.isEs() ? 'Switch to English' : 'Cambiar a español'">
@@ -32,7 +32,7 @@ import { UI } from '../../content/i18n';
           <a class="btn btn-primary cta" [routerLink]="paths().home" fragment="contacto" (click)="open.set(false)">{{ t().nav.contact }}</a>
         </nav>
 
-        <button class="icon burger" type="button" (click)="open.set(!open())" [attr.aria-expanded]="open()" aria-controls="nav" aria-label="Menú">
+        <button class="icon burger" type="button" (click)="open.set(!open())" [attr.aria-expanded]="open()" aria-controls="nav" [attr.aria-label]="t().nav.menu">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
             @if (open()) { <path d="M6 6l12 12M18 6L6 18"/> } @else { <path d="M4 7h16M4 12h16M4 17h16"/> }
           </svg>
@@ -52,7 +52,7 @@ import { UI } from '../../content/i18n';
     .lang { font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.04em; }
     .lang .on { color: var(--fg); font-weight: 500; }
     .lang .sep { margin-inline: 0.25rem; color: var(--fg-subtle); }
-    .icon { display: grid; place-items: center; width: 36px; height: 36px; border-radius: var(--radius-sm); color: var(--fg-muted); transition: background-color var(--ease), color var(--ease); }
+    .icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: var(--radius-sm); color: var(--fg-muted); transition: background-color var(--ease), color var(--ease); }
     .icon:hover { background: var(--bg-muted); color: var(--fg); }
     .burger { display: none; }
     @media (max-width: 720px) {
